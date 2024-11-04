@@ -1,4 +1,4 @@
-// Entendiendo var, let y const 
+// Entendiendo var, let y const
 
 var miVariable = 'variable';
 
