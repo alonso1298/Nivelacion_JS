@@ -15,14 +15,10 @@ console.log('---------------------------------------');
 const mapped = arr.map((el) => el * 2);
 console.log(mapped);
 
-console.log('---------------------------------------');
-
 // Se puede utilizar con HTML
 
 const mapped2 = arr.map((i) => `<h1>${i}</h1>`);
 console.log(mapped2);
-
-console.log('---------------------------------------');
 
 const users = [
     { id: 1, name: 'Perro Feliz' },
@@ -33,5 +29,34 @@ const users = [
 
 const mapped3 = users.map((user) => `<h1>${user.name}</h1>`);
 console.log(mapped3);
+
+
+console.log('---------------------------------------');
+
+// Reduce toma todos los elementos de un arreglo y podremos devolver lo que queramos como sumar todos los elementos de un arreglo
+
+// Recibe 2 parametros, el acumulador que son todos lo valores acumulados y el elemento que estamos iterando 
+const r1 = arr.reduce((acc, el) => acc + el, 0); // 0 es el valor inicial del acumulador
+console.log(r1);
+
+const getMax = (a, b) => Math.max(a, b);
+const r2 = arr.reduce(getMax);
+console.log(r2);
+
+const r3 = users.reduce((acc, i) =>
+    `${acc === '' ? '' : `${acc}, `}${i.name}`, '');
+console.log(r3);
+
+
+const r4 = users.reduce((acc, i) => {
+    if (i.id < 2) {
+        return acc; 
+    }
+    return acc.concat(i);
+}, []);
+
+console.log(r4);
+
+
 
 
