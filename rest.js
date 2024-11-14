@@ -29,4 +29,3 @@ const useState = () => ['valor', () => {}];
 
 const [valor, setValor] = useState()
 console.log(valor, setValor);
-
